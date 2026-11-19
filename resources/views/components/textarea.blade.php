@@ -1,0 +1,2 @@
+@props(['label', 'name'])
+<div class="space-y-2"><label for="{{ $name }}" class="block text-sm font-semibold text-ink">{{ $label }}</label><textarea id="{{ $name }}" name="{{ $name }}" {{ $attributes->merge(['class' => 'min-h-28 w-full rounded-xl border border-line bg-paper px-3.5 py-3 text-sm text-ink placeholder:text-stone-400']) }}>{{ $slot }}</textarea></div>

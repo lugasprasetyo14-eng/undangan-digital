@@ -1,0 +1,3 @@
+@props(['variant' => 'primary', 'type' => 'button'])
+@php($classes = ['primary' => 'bg-ink text-white hover:bg-stone-700', 'secondary' => 'border border-line bg-paper text-ink hover:bg-stone-50', 'ghost' => 'text-ink-muted hover:bg-stone-100 hover:text-ink'][$variant] ?? 'bg-ink text-white hover:bg-stone-700')
+<button type="{{ $type }}" {{ $attributes->merge(['class' => 'inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-4 text-sm font-semibold transition duration-200 '.$classes]) }}>{{ $slot }}</button>

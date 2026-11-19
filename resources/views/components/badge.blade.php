@@ -1,0 +1,2 @@
+@props(['variant' => 'default'])
+<span {{ $attributes->merge(['class' => 'inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold '.($variant === 'success' ? 'bg-emerald-50 text-emerald-800' : ($variant === 'warning' ? 'bg-amber-50 text-amber-800' : 'bg-stone-100 text-ink-muted'))]) }}>{{ $slot }}</span>

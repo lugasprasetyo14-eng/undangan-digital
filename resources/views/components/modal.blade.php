@@ -1,0 +1,2 @@
+@props(['name'])
+<div x-data="{ open: false }" x-show="open" x-cloak x-on:open-modal.window="if ($event.detail === '{{ $name }}') open = true" x-on:keydown.escape.window="open = false" class="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-5" role="dialog" aria-modal="true"><div @click.outside="open = false" class="surface w-full max-w-md p-6">{{ $slot }}</div></div>

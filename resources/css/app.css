@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
+    --color-ink: #1c1917;
+    --color-ink-muted: #57534e;
+    --color-ivory: #fafaf9;
+    --color-paper: #ffffff;
+    --color-line: #e7e5e4;
+    --color-gold: #a16207;
+    --color-gold-soft: #fef3c7;
+    --color-sage: #50635a;
+}
+
+@layer base {
+    :root { color-scheme: light; }
+    body { @apply bg-ivory text-ink antialiased; }
+    :focus-visible { @apply outline-2 outline-offset-2 outline-gold; }
+    button, a, [role='button'] { @apply cursor-pointer; }
+}
+
+@layer components {
+    .surface { @apply rounded-2xl border border-line bg-paper shadow-[0_12px_32px_rgba(28,25,23,0.06)]; }
+    .eyebrow { @apply text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

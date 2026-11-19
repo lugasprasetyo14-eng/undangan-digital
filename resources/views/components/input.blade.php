@@ -1,0 +1,3 @@
+@props(['label', 'name', 'hint' => null, 'id' => null])
+@php($id = $id ?? $name)
+<div class="space-y-2"><label for="{{ $id }}" class="block text-sm font-semibold text-ink">{{ $label }}</label><input id="{{ $id }}" name="{{ $name }}" {{ $attributes->merge(['class' => 'min-h-11 w-full rounded-xl border border-line bg-paper px-3.5 text-sm text-ink placeholder:text-stone-400'])->merge($hint ? ['aria-describedby' => $id.'-hint'] : []) }}>@if($hint)<p id="{{ $id }}-hint" class="text-xs text-ink-muted">{{ $hint }}</p>@endif</div>

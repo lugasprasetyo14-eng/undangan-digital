@@ -1,0 +1,2 @@
+@props(['title', 'description'])
+<div class="rounded-2xl border border-dashed border-line bg-paper p-8 text-center"><p class="font-serif text-xl text-ink">{{ $title }}</p><p class="mx-auto mt-2 max-w-sm text-sm leading-6 text-ink-muted">{{ $description }}</p>{{ $slot }}</div>

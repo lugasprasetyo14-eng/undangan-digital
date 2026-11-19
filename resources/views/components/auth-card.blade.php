@@ -1,0 +1,1 @@
+<div class="surface w-full max-w-md p-6 sm:p-8">{{ $slot }}</div>
